@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thanx
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./local.env
+    command: "./bin/thrust ./bin/rails s -b 0.0.0.0"
