@@ -14,5 +14,5 @@ This is unknown as yet.
 
 * How to run the test suite
 
-1. Follow how to bgin
-2. Make test
+1. Follow how to begin
+2. Make testit

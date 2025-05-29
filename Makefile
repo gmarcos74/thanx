@@ -14,5 +14,6 @@ console:
 build:
 	docker compose build
 
-test:
-	docker compose run --rm app npm t
+testit:
+	docker compose run --rm app bin/rails test -e test
+
