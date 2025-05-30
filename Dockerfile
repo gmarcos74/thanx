@@ -64,9 +64,11 @@ RUN groupadd --system --gid 1000 rails && \
     chown -R rails:rails db log storage tmp
 USER 1000:1000
 
+RUN RAILS_ENV=development bin/rails db:migrate
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["./bin/thrust", "./bin/rails", "server"]
+CMD ["./bin/rails", "db:migrate"]

@@ -6,6 +6,7 @@ down:
 
 reload:
 	make down
+	make build
 	make up
 
 console:
